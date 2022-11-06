@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Mazaare3</title>
+
+  <link rel="stylesheet" href="../css/maicons.css">
+
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <link rel="stylesheet" href="../vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../css/theme.css">
+
+
+
+</head>
+<body>
+
+  <!-- Back to top button -->
+  <div class="back-to-top"></div>
+
+  <header>
+    <nav id="topHead" class="navbar navbar-expand-lg navbar-light sticky" data-offset="500">
+      <div class="container">
+        <a href="index.html" class="navbar-brand"><img src="../img/Mazaare3_Logo.png" width="170px" alt="Mazaare3_Logo"></a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <ul class="navbar-nav ml-auto">
+            <li id="homeNav" class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li id="aboutNav" class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li id="servicesNav" class="nav-item">
+              <a class="nav-link" href="service.html">Our Services</a>
+            </li>
+            <li id="rentNav" class="nav-item">
+              <a class="nav-link" href="search.html?id=0&name=For Rent">Rent</a>
+            </li>
+            <li id="sellNav" class="nav-item">
+              <a class="nav-link" href="search.html?id=1&name=For Sell">Sell</a>
+            </li>
+            <li id="sellNav" class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+            <li id="joinNav" class="nav-item">
+              <a class="btn btn-primary ml-lg-2" href="register.html?id=0">JOIN US</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-section pt-5">
+    <div class="container">
+      
+      
+      <div class="row">
+
+        <div class="col-lg-3">
+          <div class="widget">
+            <!-- Widget search -->
+            <div class="widget-box">
+                <div class="col-sm-10" style="max-width: 100%;">
+                    <form action="#" class="form-search-blog">
+
+                      <div class="input-group">
+                            <div class="input-group-prepend" style="width: 35%;">
+                                <select id="categories" class="custom-select bg-light">
+                                    <option value="all">All</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="farm">Farm</option>
+                                </select>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Enter keyword..">
+                      </div>
+
+                      <p class="search-label">Location</p>
+                      <div class="input-group-prepend">
+                        <select id="location" class="custom-select bg-light">
+                          <option value="all">All</option>
+                          <option value="amman">Amman</option>
+                          <option value="zarqa">Al-Zarqa'</option>
+                          <option value="jarash">Jarash</option>
+                          <option value="karak">Al-Karak</option>
+                        </select>
+                      </div>
+
+                        
+                      <p class="search-label">Rooms</p>
+                      <div class="input-group-prepend">
+                        <select id="location" class="custom-select bg-light">
+                          <option value="all">All</option>
+                          <option value="2">2 Rooms</option>
+                          <option value="3">3 Rooms</option>
+                          <option value="4">4 Rooms</option>
+                          <option value="more">More Than 4</option>
+                        </select>
+                      </div>
+
+                      <div id="more-filters">
+                        <p class="search-label">Max Price: <span id="maxVal"></span></p>
+                            <div class="slidecontainer">
+                                <!-- Default Values For Rent, if it's sell will change by script in bottom of this page !!! -->
+                                <input type="range" min="0" step="20" max="1000" value="1000" class="slider" id="maxRange">
+                            </div>
+
+    
+                            <p class="search-label">Min Price: <span id="minVal"></span></p>
+                            <div class="slidecontainer">
+                                <!-- Default Values For Rent, if it's sell will change by script in bottom of this page !!! -->
+                                <input type="range" min="0" step="20" max="1000" value="0" class="slider" id="minRange">
+                            </div>
+    
+                            
+                            <p class="search-label">Floors</p>
+                            <div class="input-group-prepend">
+                                <select id="location" class="custom-select bg-light">
+                                    <option value="all">All</option>
+                                    <option value="2">2 Floors</option>
+                                    <option value="3">3 Floors</option>
+                                    <option value="4">4 Floors</option>
+                                    <option value="more">More Than 4</option>
+                                </select>
+                            </div>
+                      </div>
+                        
+                        <div style="margin-top: 20px; display: flow-root;">
+
+                          <a class="btn btn-secondary" id="show-more">More Filter <span class="mai-filter"></span></a>
+                          <a class="btn btn-secondary" id="apply-filters">Apply Filters <span class="mai-search"></span></a>
+                            
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          
+          <h2 class="title-section" id="searchType"></h2>
+          <div class="divider"></div>
+          
+          <div class="row my-5" id="search-results-row">
+            
+            <!-- Template For Item -->
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+            <!-- (end) - Template For Item -->
+            
+            <!-- !!!!!! From Here DELETE !!!!!! -->
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 py-3">
+              <div class="card-blog">
+                <div class="header">
+                  <div class="post-thumb">
+                    <img src="../img/villa-img-0.jpg" alt="">
+                  </div>
+                </div>
+                <div class="body">
+                  <h5 class="post-title"><a href="post-details.html">Modern Villa With Nice View</a></h5>
+                  <div class="post-date">Posted on <a href="#">27 Jan 2020</a></div>
+                  <div class="post-location"><span class="mai-map"></span> Amman, Abdali</div>
+                  <div class="post-price"><span class="mai-pricetag"></span> 50 000 JOD</div>
+                </div>
+              </div>
+            </div>
+            <!-- !!!!!! To Here DELETE !!!!!! -->
+
+
+          </div>
+
+        </div>
+        
+      </div>
+
+      <nav aria-label="Page Navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item" aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+
+    </div>
+  </div>
+
+  <footer class="page-footer bg-image" style="background-image: url(../img/world_pattern.svg);">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-3 py-3">
+          <a href="index.html" class="navbar-brand"><img src="../img/Mazaare3_Logo.png" width="170px" alt="Mazaare3_Logo"></a>
+          <p>Mazaare3 is your portal to find specialist offers of villas & farms for rent or sale.</p>
+
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Quick Links</h5>
+          <ul class="footer-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="service.html">Our Services</a></li>
+            <li><a href="search.html?id=0&name=For Rent">Rent</a></li>
+            <li><a href="search.html?id=1&name=For Sell">Sell</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Contact Us</h5>
+          <p>007 Wakalat St. Amman JORDAN</p>
+          <a href="tel:+962787878787" class="footer-link">+962 7878 787 87</a>
+          <a href="mailto:support@mazaare3.com" class="footer-link">support@mazaare3.com</a>
+        </div>
+        <div class="col-lg-3 py-3">
+          <h5>Follow Us</h5>
+          <p>Stay up to date with latest news.</p>
+          <div class="social-media-button">
+            <a href="#"><span class="mai-logo-facebook-f"></span></a>
+            <a href="#"><span class="mai-logo-twitter"></span></a>
+            <a href="#"><span class="mai-logo-google-plus-g"></span></a>
+            <a href="#"><span class="mai-logo-instagram"></span></a>
+            <a href="#"><span class="mai-logo-youtube"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center" id="copyright">Copyright &copy; 2022 Mazaare3, Powred by <a href="#" target="_blank">DAS software solutions</a></p>
+    </div>
+  </footer>
+
+<script src="../js/jquery-3.5.1.min.js"></script>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+<script src="../js/google-maps.js"></script>
+
+<script src="../vendor/wow/wow.min.js"></script>
+
+<script src="../js/theme.js"></script>
+
+<script>
+  
+  $("#topHead").addClass("bg-green");
+  $("#more-filters").hide();
+  $("#show-more").click(function(){
+    $("#more-filters").slideToggle(700);
+    if ($(this).text() == "More Filter "){
+        $(this).empty();
+        $(this).append("Less Filter <span class=\"mai-filter\"></span>");
+    }
+    else{
+        $(this).empty();
+        $(this).append("More Filter <span class=\"mai-filter\"></span>");
+    }
+    
+  });
+
+  // func - get type of search from url (rent / sell)
+  function GetUrlParameter(parameter){
+    var pageUrl = window.location.search.substring(1);
+    var urlVar = pageUrl.split('&');
+    for(var i = 0; i < urlVar.length; i++){
+        var parameterName = urlVar[i].split('=');
+        if(parameterName[0] == parameter)
+        {
+            return decodeURIComponent(parameterName[1]);
+        }
+    }
+  }
+  // call function to get ID from url ('rent' = 0 / 'sell' = 1)
+  var searchTypeID = GetUrlParameter('id');
+  var searchTypeName = GetUrlParameter('name');
+  
+  $("#searchType").empty();
+  $("#searchType").append(searchTypeName);
+
+  if(searchTypeID == 1){
+    $("#sellNav").addClass("active");
+
+    $("#maxRange").removeAttr('min');
+    $("#maxRange").removeAttr('step');
+    $("#maxRange").removeAttr('max');
+    $("#maxRange").removeAttr('value');
+
+    $("#minRange").removeAttr('min');
+    $("#minRange").removeAttr('step');
+    $("#minRange").removeAttr('max');
+    $("#minRange").removeAttr('value');
+
+    $("#maxRange").attr('min', 0);
+    $("#maxRange").attr('step', 5000);
+    $("#maxRange").attr('max', 1000000);
+    $("#maxRange").attr('value', 1000000);
+
+    $("#minRange").attr('min', 0);
+    $("#minRange").attr('step', 5000);
+    $("#minRange").attr('max', 1000000);
+    $("#minRange").attr('value', 0);
+  }else{
+    $("#rentNav").addClass("active");
+
+    // value of range still as it in elements
+  }
+
+    
+
+</script>
+
+<!-- Range Slider -->
+<script>
+    var maxSlider = document.getElementById("maxRange");
+    var maxOutput = document.getElementById("maxVal");
+    
+    var minSlider = document.getElementById("minRange");
+    var minOutput = document.getElementById("minVal");
+
+    maxOutput.innerHTML = maxSlider.value;
+    minOutput.innerHTML = minSlider.value;
+    
+    maxSlider.oninput = function() {
+        maxOutput.innerHTML = this.value;
+    }
+    
+    minSlider.oninput = function() {
+        minOutput.innerHTML = this.value;
+    }
+</script>
+</body>
+</html>

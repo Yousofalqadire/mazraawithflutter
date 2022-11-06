@@ -1,0 +1,22 @@
+﻿@model IEnumerable<UserImage>
+@{
+    Layout = null;
+}
+
+
+
+@foreach (var item in Model)
+
+{
+    if (@ViewBag.UserId == @item.AdId)
+    {
+
+        <div class="mySlides fade-img">
+            <img class="slider-img" src="@Url.Content("~/uploads/uploads" + @item.ImageURL)" style="width:100%">
+        </div>
+
+
+    }
+
+
+}

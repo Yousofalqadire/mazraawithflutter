@@ -1,0 +1,109 @@
+﻿@model ContactUs
+@{
+    ViewData["Title"] = "Contact Us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="page-section">
+
+    <div class="container-fluid mt-4">
+        <h2 class="mb-4 font-weight-medium text-secondary">Get in touch</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+
+                <form  class="contact-form py-5 px-lg-5" method="post" asp-action="ContactUs">
+
+                    <div class="row form-group">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <label class="text-black" for="fname">First Name</label>
+                            <input type="text" id="fname" asp-for="FirstName" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-black" for="lname">Last Name</label>
+                            <input type="text" id="lname" asp-for="LastName"   class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="email">Email</label>
+                            <input type="email" id="email" asp-for="Email" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+
+                        <div class="col-md-12">
+                            <label class="text-black" for="subject">Mobile</label>
+                            <input type="text" id="subject" asp-for="Mobile" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-12">
+                            <label class="text-black" for="message">Message</label>
+                            <textarea name="message" asp-for="Message" id="message" cols="30" rows="5" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="row form-group mt-4">
+                        <div class="col-md-12">
+                            <input type="submit" value="Send Message" class="btn btn-secondary">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div>
+
+                    <div class="display-4 text-primary" style="display: inline-block;display: inline-block;text-align: center;margin-right: 20px;font-size: 35px; width: 60px;">
+                        <span class="mai-call"></span>
+                        <p class="mb-3 font-weight-medium text-lg">Phone</p>
+                    </div>
+                    <div style="display: inline-block;">
+                        <p class="mb-0"><a href="tel:+962787878787" class="text-secondary">+962 7878 787 87</a></p>
+                        <p class="mb-0"><a href="tel:+962787878787" class="text-secondary">+962 7878 787 87</a></p>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="display-4 text-primary" style="display: inline-block;display: inline-block;text-align: center;margin-right: 20px;font-size: 35px; width: 60px;">
+                        <span class="mai-mail"></span>
+                        <p class="mb-3 font-weight-medium text-lg">Email</p>
+                    </div>
+                    <div style="display: inline-block;">
+                        <p class="mb-0"><a href="mailto:support@mazaare3.com" class="text-secondary">support@mazaare3.com</a></p>
+                        <p class="mb-0"><a href="mailto:support@mazaare3.com" class="text-secondary">support@mazaare3.com</a></p>
+                    </div>
+
+                </div>
+
+                <div>
+
+                    <div class="display-4 text-primary" style="display: inline-block;display: inline-block;text-align: center;margin-right: 20px;font-size: 35px; width: 60px;">
+                        <span class="mai-pin"></span>
+                        <p class="mb-3 font-weight-medium text-lg">Address</p>
+                    </div>
+                    <div style="display: inline-block;">
+                        <p class="mb-0">
+                            <a href="https://www.google.com/maps/place/31%C2%B057'29.2%22N+35%C2%B051'38.4%22E/31.9581095,35.8628647,17z/data=!3m1!4b1!4m13!1m6!3m5!1s0x151ca110009652b1:0x1815323274170eff!2sStarwarriors!8m2!3d31.9555923!4d35.8604998!3m5!1s0x0:0x38391e319b802d81!7e2!8m2!3d31.9581053!4d35.860676" class="text-secondary">
+                                007 Wakalat St. Amman JORDAN
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="maps-container"><div id="google-maps"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#contactNav").addClass("active");
+     $("#topHead").addClass("bg-green");
+</script>

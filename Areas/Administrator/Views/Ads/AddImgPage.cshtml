@@ -1,0 +1,77 @@
+﻿ @using Microsoft.AspNetCore.Http
+@model UImages
+@{
+    ViewData["Title"] = "AddImgPage";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+
+    <section class="banner-bottom-wthree py-md-5 py-3" id="AboutUS">
+
+        <div class="container">
+            <div class="inner-sec-w3layouts py-md-5 py-3">
+                <h3 class="tittle text-center mb-lg-5 mb-3">
+                    <span data-blast="color" style="color:seagreen">Add Cover Image and All Images of this Resort </span>
+                </h3>
+                <h3 hidden>ID = @ViewBag.ID</h3>
+
+
+                <div class="col-lg-6 galsses-grid-right mt-4">
+
+                    @*<div class="log-in mt-md-4 mt-3">
+                        <a asp-action="Index" asp-controller="Ads" asp-area="Administrator" class="btn text-uppercase" data-blast="bgColor" style="background-color:goldenrod">
+                            Back To Home
+                        </a>
+                    </div>*@
+                    <div class="line" data-blast="bgColor" style="color:goldenrod"></div>
+                  
+                    <form method="post" asp-action="AddImgPage" asp-controller="Ads" enctype="multipart/form-data">
+                        <div class="form-group">
+                        
+                            <label asp-for="AdId" class="my-2" hidden></label>
+                            <input asp-for="AdId" value="@ViewBag.ID" class="my-2" hidden />
+
+
+
+                        </div>
+
+                        <div class="form-group" style="color:white !important">
+                            <label asp-for="CoverImage" class="my-2"> Cover Image </label>
+                            <input asp-for="CoverImage" class="form-control" />
+
+                        </div>
+                        <div class="form-group" style="color:white !important">
+                            <label asp-for="Images" class="my-2">All Images </label>
+                            <input asp-for="Images" multiple class="form-control" />
+
+                        </div>
+
+                        <div class="input-group1">
+                            <input class="btn text-uppercase" data-blast="bgColor" style="background-color:green ; width:100%; color : yellow" type="submit" value="Submit">
+
+                         @*   <a class="btn text-uppercase" data-blast="bgColor" style="background-color:green ; color:yellow" asp-action="ViewImages">View And Edit Images</a>*@
+
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+ 
+
+
+
+
+
