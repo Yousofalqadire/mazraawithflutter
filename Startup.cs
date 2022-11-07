@@ -1,3 +1,5 @@
+using Mazaare3.Interfaces;
+using Mazaare3.Interfaces.Repositories;
 using Mazaare3.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,6 +27,8 @@ namespace Mazaare3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICategory,CategoryRepository>();
+            services.AddScoped<IAds,AdsRepository>();
             services.AddControllersWithViews();
             services.AddDbContext<AppDBContext>(options =>
             {
