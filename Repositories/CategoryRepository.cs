@@ -16,10 +16,9 @@ namespace Mazaare3.Interfaces.Repositories
             this.db = db;
         }
 
-        public async Task<IEnumerable<string>> GetCategoriesAsync()
+        public async Task<IEnumerable<Category>> GetCategoriesAsync()
         {
-            var result = db.Ads.Select(x => x.Category).Distinct();
-            return await result.ToListAsync();
+            return await db.Categories.ToListAsync();
         }
     }
 }

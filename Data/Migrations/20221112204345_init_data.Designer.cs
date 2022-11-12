@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mazaare3.Data.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20221106205156_init_data")]
+    [Migration("20221112204345_init_data")]
     partial class init_data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

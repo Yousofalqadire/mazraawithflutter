@@ -19,5 +19,18 @@ namespace Mazaare3.Data
 
             }
         }
+
+        public static async Task SeedCategories(AppDBContext db)
+        {
+            if(!db.Categories.Any()){
+             List<Category> categories = new List<Category>();
+              categories.Add(new Category{CategoryName="Sell"});
+              categories.Add(new Category{CategoryName="Rent"});
+              await db.AddRangeAsync(categories);
+              await db.SaveChangesAsync();
+            }
+           
+
+        }
     }
 }

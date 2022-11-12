@@ -22,7 +22,7 @@ namespace Mazaare3.Controllers.Api
             this.category = category;
         }
        [HttpGet]
-public async Task<ActionResult<IEnumerable<string>>> getCategories()
+public async Task<ActionResult<IEnumerable<Category>>> getCategories()
  {
     return Ok(await category.GetCategoriesAsync());
 

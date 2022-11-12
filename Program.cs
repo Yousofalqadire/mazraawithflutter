@@ -24,6 +24,7 @@ namespace Mazaare3
                 var context  = services.GetRequiredService<AppDBContext>();
                 await context.Database.MigrateAsync();
                 await Seed.SeedAds(context);
+                await Seed.SeedCategories(context);
 
             }catch (Exception ex){
 

@@ -8,7 +8,7 @@
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
         "IsApproved": false,
-        "CoverImage": "Null",
+        "CoverImage": "../img/newStart.png",
         "PostedDate": "0001-01-01T00:00:00",
         "Address": "Amman",
         "Floors": "2 Floors",
@@ -38,11 +38,11 @@
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
         "IsApproved": true,
-        "CoverImage": "Null",
+        "CoverImage": "../img/newStart.png",
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
-        "Floors": "",
-        "Rooms": ""
+        "Floors": "2 Floors",
+        "Rooms": "3 Rooms"
     },
     {
         "AdId": 4,
@@ -53,10 +53,10 @@
         "AlterMobile": "079",
         "Email": "d@gmail.com",
         "IsApproved": true,
-        "CoverImage": "~/img/newStart.png",
+        "CoverImage": "../img/newStart.png",
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
-        "Floors": "",
+        "Floors": "2 Floors",
         "Rooms": ""
     },
     {
@@ -71,8 +71,8 @@
         "CoverImage": "../img/choice.png",
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
-        "Floors": "",
-        "Rooms": ""
+        "Floors": "2 Floors",
+        "Rooms": "3 Rooms"
     },
     {
         "AdId": 6,
@@ -83,11 +83,11 @@
         "AlterMobile": "079",
         "Email": "d@gmail.com",
         "IsApproved": true,
-        "CoverImage": "~/img/newStart.png",
+        "CoverImage": "../img/newStart.png",
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
-        "Floors": "",
-        "Rooms": ""
+        "Floors": "2 Floors",
+        "Rooms": "3 Rooms"
     },
     {
         "AdId": 7,
@@ -101,8 +101,8 @@
         "CoverImage": "../img/choice.png",
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
-        "Floors": "",
-        "Rooms": ""
+        "Floors": "2 Floors",
+        "Rooms": "3 Rooms"
     },
     {
         "AdId": 8,
@@ -113,10 +113,10 @@
         "AlterMobile": "079",
         "Email": "d@gmail.com",
         "IsApproved": true,
-        "CoverImage": "~/img/newStart.png",
+        "CoverImage": "../img/newStart.png",
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
-        "Floors": "",
+        "Floors": "2 Floors",
         "Rooms": ""
     },
     {
@@ -128,11 +128,11 @@
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
         "IsApproved": true,
-        "CoverImage": "~/img/choice.ong",
+        "CoverImage": "../img/choice.png",
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
-        "Floors": "",
-        "Rooms": ""
+        "Floors": "2 Floors",
+        "Rooms": "3 Rooms"
     },
     {
         "AdId": 10,
@@ -146,8 +146,8 @@
         "CoverImage": "../img/newStart.png",
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
-        "Floors": "",
-        "Rooms": ""
+        "Floors": "2 Floors",
+        "Rooms": "3 Rooms"
     }
    
 ]
