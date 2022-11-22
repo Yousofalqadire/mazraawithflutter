@@ -7,6 +7,7 @@ using API.Extintions;
 using API.Helpers;
 using Mazaare3.Interfaces;
 using Mazaare3.Models;
+using Mazaare3.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ControllerBase = Microsoft.AspNetCore.Mvc.ControllerBase;
@@ -36,9 +37,9 @@ namespace Mazaare3.Controllers.Api
             return Ok(result);
         }
        
-         [HttpGet("{id:int}")]
+         [HttpGet("get-ad-details/{id:int}")]
 
-         public async Task<ActionResult<Ad>> GetAdById(int id)
+         public async Task<ActionResult<AdDetail>> GetAdById([FromRoute]int id)
          {
             return Ok(await ads.GetAdByIdAsync(id));
          } 

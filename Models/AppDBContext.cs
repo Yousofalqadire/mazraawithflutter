@@ -24,7 +24,7 @@ namespace Mazaare3.Models
         public DbSet<Ad> Ads { get; set; }
         public DbSet<User> AppUsers { get; set; }
         
-              public DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
         public DbSet<Floor> Floors { get; set; }

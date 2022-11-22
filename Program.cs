@@ -25,6 +25,7 @@ namespace Mazaare3
                 await context.Database.MigrateAsync();
                 await Seed.SeedAds(context);
                 await Seed.SeedCategories(context);
+                await Seed.SeedAdmin(context);
 
             }catch (Exception ex){
 

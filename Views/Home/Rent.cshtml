@@ -123,7 +123,7 @@
                                         <p class="search-label">Max Price: <span id="maxVal"></span></p>
                                         <div class="slidecontainer">
                                             <!-- Default Values For Rent, if it's sell will change by script in bottom of this page !!! -->
-                                            <input type="range" min="0" step="20" max="1000" value="1000" class="slider" id="maxRange">
+                                            <input name="maxRange" type="range" min="0" step="20" max="1000" value="1000" class="slider" id="maxRange">
 
                                         </div>
 
@@ -131,7 +131,7 @@
                                         <p class="search-label">Min Price: <span id="minVal"></span></p>
                                         <div class="slidecontainer">
                                             <!-- Default Values For Rent, if it's sell will change by script in bottom of this page !!! -->
-                                            <input type="range" min="0" step="20" max="1000" value="0" class="slider" id="minRange">
+                                            <input name="minRange" type="range" min="0" step="20" max="1000" value="0" class="slider" id="minRange">
                                         </div>
 
 
@@ -381,10 +381,11 @@
 
         var minSlider = document.getElementById("minRange");
         var minOutput = document.getElementById("minVal");
-
         maxOutput.innerHTML = maxSlider.value;
         minOutput.innerHTML = minSlider.value;
-
+        $(document).ready(function => {
+            
+        })
         maxSlider.oninput = function () {
             maxOutput.innerHTML = this.value;
         }
@@ -416,6 +417,7 @@
             // window.location.href
         }
 
+       
 
     </script>
 </body>

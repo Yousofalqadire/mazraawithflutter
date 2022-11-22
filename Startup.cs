@@ -1,3 +1,4 @@
+using Mazaare3.Helpers;
 using Mazaare3.Interfaces;
 using Mazaare3.Interfaces.Repositories;
 using Mazaare3.Models;
@@ -29,6 +30,7 @@ namespace Mazaare3
         {
             services.AddScoped<ICategory,CategoryRepository>();
             services.AddScoped<IAds,AdsRepository>();
+            services.AddAutoMapper(typeof(AutoMapperProfile).Assembly);
             services.AddControllersWithViews();
             services.AddDbContext<AppDBContext>(options =>
             {

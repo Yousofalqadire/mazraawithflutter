@@ -29,8 +29,19 @@ namespace Mazaare3.Data
               await db.AddRangeAsync(categories);
               await db.SaveChangesAsync();
             }
-           
+        }
 
+        public static async Task SeedAdmin(AppDBContext db){
+            if(!db.Admins.Any()){
+                Admin admin = new Admin{
+                    Email="qadire333@yahoo.com",
+                    FullName = "yousof alqadire",
+                    Password = "YousofAlqadire",
+                    Mobile = "0775904800"
+                };
+                await db.Admins.AddAsync(admin);
+                await db.SaveChangesAsync();
+            }
         }
     }
 }

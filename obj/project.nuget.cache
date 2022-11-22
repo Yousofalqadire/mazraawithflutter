@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "I8oaT5FMdZKb/2OhZGvPAn0DAOkFZKZhi6HedWxtrI5QNKptJfN4aaQ3igLIJrZ9XIM7fTJv1bdU5BJlO8T+3Q==",
+  "dgSpecHash": "N6iGBT0nXi/KGDSevP5Sv1ZYoHSidzIB24f7bJcdGXC65Xy8YJWULtDviBLL6F9AqmWheP2XpdnryYYm0h6l6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Discovery PC\\Desktop\\mazraa project\\Mazaare3\\Mazaare3\\Mazaare3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Discovery PC\\.nuget\\packages\\aspnetcore.paginatedlist\\5.0.0\\aspnetcore.paginatedlist.5.0.0.nupkg.sha512",
+    "C:\\Users\\Discovery PC\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Discovery PC\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\grpc.core\\2.46.5\\grpc.core.2.46.5.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\grpc.core.api\\2.46.5\\grpc.core.api.2.46.5.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\grpc.core.testing\\2.46.5\\grpc.core.testing.2.46.5.nupkg.sha512",
@@ -133,7 +135,7 @@
     "C:\\Users\\Discovery PC\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\Discovery PC\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Discovery PC\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
     "C:\\Users\\Discovery PC\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",

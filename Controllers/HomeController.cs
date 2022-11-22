@@ -111,12 +111,14 @@ namespace Mazaare3.Controllers
 
         }
 
-        public async Task<ActionResult> Rent(string AddressName, string RoomName, string FloorName, string maxRange, string minRange, int pageNumber = 1)
+        public async Task<ActionResult<PagedList<Ad>>> Rent(string AddressName, string RoomName, string FloorName, string maxRange, string minRange, int pageNumber = 1)
         {
             // string email = maxRange.Value.ToString();
             //MaxSlider = 0;
             //MinSlider = 0; 
-            //maxRange =  
+            //maxRange =
+            //  var mPrice = Convert.ToDouble(minRange);
+            //  var maxPrice = Convert.ToDouble(maxRange);  
 
             foreach (var item in db.Ads)
             {
@@ -141,10 +143,10 @@ namespace Mazaare3.Controllers
                 result = result.Where(x => x.Rooms == RoomName);
             if (!string.IsNullOrEmpty(FloorName))
                 result = result.Where(x => x.Floors == FloorName);
-            //if (!string.IsNullOrEmpty(minRange))
-            //    result = result.Where(x => x.Price >= Convert.ToDouble(minRange));
-            //if (!string.IsNullOrEmpty(maxRange))
-            //    result = result.Where(x => x.Price >= Convert.ToDouble(maxRange));
+            if (!string.IsNullOrEmpty(minRange))
+               result = result.Where(x => x.Price >= Convert.ToDouble(minRange));
+            if (!string.IsNullOrEmpty(maxRange))
+                result = result.Where(x => x.Price <= Convert.ToDouble(maxRange));
             return View(await PaginatedList<Ad>.CreateAsync(result, pageNumber, 8));
         }
 
@@ -184,7 +186,8 @@ namespace Mazaare3.Controllers
         }
         [HttpGet]
    
-        public async Task<ActionResult> Sell(string AddressName, string RoomName, string FloorName , string maxRange, string minRange, int pageNumber = 1)
+        public async Task<ActionResult> Sell(string AddressName, string RoomName, string FloorName
+         , string maxRange, string minRange, int pageNumber = 1)
         {
             // string email = maxRange.Value.ToString();
             //MaxSlider = 0;
@@ -214,10 +217,10 @@ namespace Mazaare3.Controllers
                 result = result.Where(x => x.Rooms == RoomName);
             if (!string.IsNullOrEmpty(FloorName))
                 result = result.Where(x => x.Floors == FloorName);
-            //if (!string.IsNullOrEmpty(minRange))
-            //    result = result.Where(x => x.Price >= Convert.ToDouble(minRange));
-            //if (!string.IsNullOrEmpty(maxRange))
-            //    result = result.Where(x => x.Price >= Convert.ToDouble(maxRange));
+            if (!string.IsNullOrEmpty(minRange))
+                result = result.Where(x => x.Price >= Convert.ToDouble(minRange));
+            if (!string.IsNullOrEmpty(maxRange))
+             result = result.Where(x => x.Price <= Convert.ToDouble(maxRange));
             return View(await PaginatedList<Ad>.CreateAsync(result, pageNumber, 8)); 
         }
 
