@@ -33,7 +33,8 @@ namespace Mazaare3.Models
         public string Floors { get; set; }
         [Required(ErrorMessage = "Please Enter Rooms")]
         public string Rooms { get; set; }
- 
+        
+        public string Discription { get; set; }
 
     }
 }

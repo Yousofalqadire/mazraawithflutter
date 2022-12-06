@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mazaare3.Data.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20221112204345_init_data")]
+    [Migration("20221201202627_init_data")]
     partial class init_data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,9 @@ namespace Mazaare3.Data.Migrations
 
                     b.Property<string>("CoverImage")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Discription")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Email")

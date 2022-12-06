@@ -41,7 +41,7 @@ namespace Mazaare3.Interfaces.Repositories
            var adDetail = new AdDetail{AdId = ad.AdId,Category = ad.Category,
             Email = ad.Email,Images= images,Address= ad.Address,AlterMobile= ad.AlterMobile,
             Floors = ad.Floors,IsApproved = ad.IsApproved,Mobile=ad.Mobile,PostedDate= ad.PostedDate,
-            Price = ad.Price,Title = ad.Title,Rooms = ad.Rooms};
+            Price = ad.Price,Title = ad.Title,Rooms = ad.Rooms,Discription = ad.Discription};
             return adDetail;
 
         }
@@ -50,6 +50,16 @@ namespace Mazaare3.Interfaces.Repositories
         {
             var query = db.Ads.AsNoTracking();
             return await PagingList<Ad>.CreatAsync(query,userParams.PageNumber,userParams.PageSize);
+        }
+
+        public async Task<IEnumerable<Ad>> GetRentsAdsAsync()
+        {
+            return await db.Ads.Where(x => x.Category == "Rent").ToListAsync();
+        }
+
+        public async Task<IEnumerable<Ad>> GetSellsAdsAsync()
+        {
+            return await db.Ads.Where(x => x.Category == "Sell").ToListAsync();
         }
     }
 }

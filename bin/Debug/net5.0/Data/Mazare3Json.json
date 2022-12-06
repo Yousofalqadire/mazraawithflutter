@@ -3,7 +3,7 @@
         "AdId": 1,
         "Title": "hidrgfhjhgfd",
         "Category": "Rent",
-        "Price": 100,
+        "Price": 1500,
         "Mobile": "07858943761",
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
@@ -12,13 +12,14 @@
         "PostedDate": "0001-01-01T00:00:00",
         "Address": "Amman",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 2,
         "Title": "hi check posteddate2",
         "Category": "Rent",
-        "Price": 1,
+        "Price": 150,
         "Mobile": "078",
         "AlterMobile": "079",
         "Email": "d@gmail.com",
@@ -27,13 +28,14 @@
         "PostedDate": "0001-01-01T00:00:00",
         "Address": "Irbid",
         "Floors": "2 Floors",
-        "Rooms": "2 Rooms"
+        "Rooms": "2 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 3,
         "Title": "hi",
         "Category": "Sell",
-        "Price": 100,
+        "Price": 75000,
         "Mobile": "0785894376",
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
@@ -42,13 +44,14 @@
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 4,
         "Title": "hi check posteddate",
         "Category": "Sell",
-        "Price": 12,
+        "Price": 65000,
         "Mobile": "078",
         "AlterMobile": "079",
         "Email": "d@gmail.com",
@@ -57,13 +60,14 @@
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
         "Floors": "2 Floors",
-        "Rooms": ""
+        "Rooms": "",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 5,
         "Title": "hi",
         "Category": "Sell",
-        "Price": 100,
+        "Price": 85000,
         "Mobile": "0785894376",
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
@@ -72,13 +76,14 @@
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 6,
         "Title": "hi check posteddate",
         "Category": "Sell",
-        "Price": 12,
+        "Price": 60000,
         "Mobile": "078",
         "AlterMobile": "079",
         "Email": "d@gmail.com",
@@ -87,13 +92,14 @@
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 7,
         "Title": "hi",
         "Category": "Sell",
-        "Price": 100,
+        "Price": 500000,
         "Mobile": "0785894376",
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
@@ -102,13 +108,14 @@
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 8,
         "Title": "hi check posteddate",
         "Category": "Sell",
-        "Price": 12,
+        "Price": 120000,
         "Mobile": "078",
         "AlterMobile": "079",
         "Email": "d@gmail.com",
@@ -117,13 +124,14 @@
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
         "Floors": "2 Floors",
-        "Rooms": ""
+        "Rooms": "",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 9,
         "Title": "hi",
         "Category": "Sell",
-        "Price": 100,
+        "Price": 45000,
         "Mobile": "0785894376",
         "AlterMobile": "0798227127",
         "Email": "doaa@gmail.com",
@@ -132,13 +140,14 @@
         "PostedDate": "2022-11-11T00:00:00",
         "Address": "Amman",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     },
     {
         "AdId": 10,
         "Title": "hi check posteddate",
         "Category": "Sell",
-        "Price": 12,
+        "Price": 6800,
         "Mobile": "078",
         "AlterMobile": "079",
         "Email": "d@gmail.com",
@@ -147,7 +156,8 @@
         "PostedDate": "2022-10-15T21:02:58.849",
         "Address": "Irbid",
         "Floors": "2 Floors",
-        "Rooms": "3 Rooms"
+        "Rooms": "3 Rooms",
+        "Discription":"قطعه ارض للبيع في طريق المطار تبعد عن جسر المطار 10 كيلو متر للبيع مساحه 10 دونم , تقع القطعه على شارعين , حوض السكة الشمالي"
     }
    
 ]

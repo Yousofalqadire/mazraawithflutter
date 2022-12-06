@@ -53,7 +53,8 @@ namespace Mazaare3.Data.Migrations
                     CoverImage = table.Column<string>(type: "TEXT", nullable: false),
                     PostedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Floors = table.Column<string>(type: "TEXT", nullable: false),
-                    Rooms = table.Column<string>(type: "TEXT", nullable: false)
+                    Rooms = table.Column<string>(type: "TEXT", nullable: false),
+                    Discription = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {

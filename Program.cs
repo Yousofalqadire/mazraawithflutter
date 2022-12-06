@@ -43,7 +43,7 @@ namespace Mazaare3
                       .UseKestrel()
                       .UseIISIntegration()
                     .UseStartup<Startup>()
-                    .UseUrls("http://192.168.1.107:8080");
+                    .UseUrls("http://192.168.142.64:8080");
                 });
     }
 }

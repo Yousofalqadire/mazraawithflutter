@@ -28,6 +28,7 @@ namespace Mazaare3.Models.ViewModel
         public DateTime PostedDate { get; set; }
         public string Floors { get; set; }
         public string Rooms { get; set; }
+        public string Discription { get; set; }
         public List<ImageDto> Images{get; set;}
     }
 }

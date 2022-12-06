@@ -13,5 +13,7 @@ namespace Mazaare3.Interfaces
         Task<PagingList<Ad>> GetAllAdsAsync(UserParams userParams);
         Task<AdDetail> GetAdByIdAsync(int id);
         Task<IEnumerable<Ad>> GetAdByCategoryAsync(string category);
+        Task<IEnumerable<Ad>> GetSellsAdsAsync();
+        Task<IEnumerable<Ad>> GetRentsAdsAsync(); 
     }
 }

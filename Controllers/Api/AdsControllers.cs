@@ -51,6 +51,14 @@ namespace Mazaare3.Controllers.Api
             var result = await ads.GetAdByCategoryAsync(name);
             return Ok(result);
          } 
+         [HttpGet("get-sells")]
+         public async Task<ActionResult<IEnumerable<Ad>>> GetSells(){
+            return Ok(await ads.GetSellsAdsAsync() );
+         }
+           [HttpGet("get-rents")]
+         public async Task<ActionResult<IEnumerable<Ad>>> GetRents(){
+            return Ok(await ads.GetRentsAdsAsync() );
+         }
        
     }
 }
